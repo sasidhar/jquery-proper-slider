@@ -1,0 +1,17 @@
+p {
+	text-align : center;
+}
+a {
+	text-decoration : none;
+	display : inline-block;
+	padding : 5px;
+	margin : 0 20px;
+	background-color : #eee;
+	border : 1px slid #ccc;
+}
+a:hover {
+	background-color : #ccc;
+}
+.slides {
+	margin : auto;
+}
