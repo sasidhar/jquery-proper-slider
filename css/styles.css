@@ -12,6 +12,10 @@ a {
 a:hover {
 	background-color : #ccc;
 }
+.example {
+	float : left;
+	margin : 20px;
+}
 .slides {
 	margin : auto;
 }

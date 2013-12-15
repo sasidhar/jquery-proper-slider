@@ -6,7 +6,9 @@
 		    	 
 		         var settings = $.extend({
 		            	width: 400,
-		            	height: 300
+		            	height: 300,
+						auto_slide: false,
+						auto_slide_delay : 2000
 		        	}, options);
 		        
 		        return this.each(function() {
@@ -16,6 +18,8 @@
 		            	li = ul.find('li'),
 		            	count = li.length + 2;
 		            
+					settings.auto_slide_timeout_id = null;
+					
 		            slides.data('settings', settings);
 		            
 		            slides.css({
@@ -53,6 +57,12 @@
 		            	.insertBefore(li.filter('.first'));
 		            
 		            slides.properSlider('show', 1);
+					
+					if(settings.auto_slide) {
+						settings.auto_slide_interval_id = setInterval(function() {
+							slides.properSlider('slide', 'next');
+						}, settings.auto_slide_delay);
+					}
 		            
 		        });
 
@@ -108,8 +118,6 @@
 	    				 current = count - 2;
 	    			 }
 		    		 
-		    		 console.log(current);
-
 		    		 ul
 			    		 .animate({
 			    			 left : -1 * current * settings.width
