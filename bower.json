@@ -1,0 +1,12 @@
+{
+  "name": "jQuery Proper Slider",
+  "version": "0.0.1",
+  "description": "jQuery Porper Slider component",
+  "keywords": [
+    "Proper Slider",
+    "Slider",
+	"jQuery"
+  ],
+  "main": "jquery-proper-slider.js",
+  "license": "Use As You Like"
+}
